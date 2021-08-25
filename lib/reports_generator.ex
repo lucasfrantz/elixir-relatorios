@@ -1,7 +1,7 @@
 defmodule ReportsGenerator do
   def build(filename) do
     "reports/#{filename}"
-    |> File.stream!()
+    |> File.read()
     |> handle_file()
   end
 
